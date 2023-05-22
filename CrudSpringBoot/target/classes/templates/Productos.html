@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Veterinaria - Consultas</title>
+
+    <!-- Estilos -->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+
+
+        /* Animación de desvanecimiento */
+        .fade-in {
+            animation: fade-in 1s ease-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animación de rebote */
+        .bounce {
+            animation: bounce 0.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Veterinaria</a>
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" th:href="@{/inicio}">Inicio</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" href="/servicios" >Servicios</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/productos">Productos</a
+                        >
+                        <span class="visually-hidden">(current)</span>
+                    </li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Tienda en línea</h1>
+    <div class="row">
+        <!-- Estéticas comunes -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_635086-MCO50917130216_072022-O.webp" class="card-img-top" alt="Estética 1">
+                <div class="card-body">
+                    <h5 class="card-title">Kit Maquina Peluquera Canina Profesional Perro Gato 14 Pieza</h5>
+                    <p class="card-text">$118.150</p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_925424-MCO51467989701_092022-O.webp" class="card-img-top" alt="Estética 2">
+                <div class="card-body">
+                    <h5 class="card-title">Tijeras Peluqueria Canina Kit X 3</h5>
+                    <p class="card-text">$129.900</p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fin de estéticas comunes -->
+
+        <!-- Alimentos comunes -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_721306-MCO53682621947_022023-O.webp" class="card-img-top" alt="Alimento 1">
+                <div class="card-body">
+                    <h5 class="card-title">Ringo Croquetas X30kg</h5>
+                    <p class="card-text">$153.000</p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_714085-MLA47953547329_102021-O.webp" class="card-img-top" alt="Alimento 2">
+                <div class="card-body">
+                    <h5 class="card-title">Alimento Pro Plan OptiDerma Sensitive para gato adulto sabor salmón y arroz en bolsa de 3kg</h5>
+                    <p class="card-text">$
+                        113.888</p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fin de alimentos comunes -->
+
+        <!-- Accesorios comunes -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_936217-MCO54958938317_042023-O.webp" class="card-img-top" alt="Accesorio 1">
+                <div class="card-body">
+                    <h5 class="card-title">Correa De Paseo Perro 10 Metros</h5>
+                    <p class="card-text">$29.900
+                    </p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_871750-MCO49139922122_022022-O.webp" class="card-img-top" alt="Accesorio 2">
+                <div class="card-body">
+                    <h5 class="card-title">Bozal Tipo Canasta Para Perros Z4</h5>
+                    <p class="card-text">$
+                        20.800</p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fin de accesorios comunes -->
+
+        <!-- Productos de higiene -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_859314-CBT69447515919_052023-O.webp" class="card-img-top" alt="Higiene 1">
+                <div class="card-body">
+                    <h5 class="card-title">Kit De Aseo De Animales Pequeños</h5>
+                    <p class="card-text">$
+                        88.563</p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_604155-MCO54975439510_042023-O.webp" class="card-img-top" alt="Higiene 2">
+                <div class="card-body">
+                    <h5 class="card-title">Cepillo Cerdas Suaves Para Gato</h5>
+                    <p class="card-text">$
+                        37.400</p>
+                </div>
+                <div class="card-footer">
+
+                    <a class="btn btn-primary text-center" href="/formularioC">Comprar aquí</a>
+                </div>
+            </div>
+        </div>
+        <!-- Fin de productos de higiene -->
+    </div>
+</div>
+
+
+<script>
+    // Agregar la clase de animación a los elementos deseados
+    const elementsToAnimate = document.querySelectorAll('.card');
+    elementsToAnimate.forEach((element, index) => {
+        setTimeout(() => {
+            element.classList.add('fade-in');
+        }, index * 200);
+    });
+
+    // Ejemplo de animación al hacer clic en un botón
+    const button = document.querySelector('.btn-primary');
+    button.addEventListener('click', () => {
+        button.classList.add('bounce');
+        setTimeout(() => {
+            button.classList.remove('bounce');
+        }, 1000);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
