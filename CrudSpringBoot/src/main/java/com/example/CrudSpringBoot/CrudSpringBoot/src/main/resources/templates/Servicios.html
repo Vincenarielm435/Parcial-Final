@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Veterinaria - Consultas</title>
+
+    <!-- Estilos -->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+
+     main {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 8);
+        text-align: center;
+
+    }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Veterinaria</a>
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" th:href="@{/inicio}">Inicio</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a  class="nav-link" href="/servicios" >Servicios</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/productos">Productos</a
+                        >
+                        <span class="visually-hidden">(current)</span>
+                    </li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main role="main" class="container">
+    <section id="servicios" class="my-5">
+        <h2 class="text-center">Servicios</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="https://veterinariaunisantander.com/wp-content/uploads/2021/03/CONSULTA-GENERAL-scaled.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Consulta general</h5>
+                        <p class="card-text">Realizamos exámenes y diagnósticos para mantener a tu mascota sana.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="https://www.lavanguardia.com/files/article_main_microformat/uploads/2019/10/25/5fa52ef8267ad.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Vacunación</h5>
+                        <p class="card-text">Mantén a tu mascota protegida contra enfermedades con nuestro servicio de vacunación.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="https://www.bienestarcolsanitas.com/media/k2/items/cache/4da06b4d1e26691ff46d67a7ba8f9e38_XL.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Cirugía</h5>
+                        <p class="card-text">Realizamos cirugías programadas y de emergencia para garantizar la salud de tu mascota.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="https://surnoticias.com/images/2022/04/06/Estetica_canina.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Estética</h5>
+                        <p class="card-text">Mantén a tu mascota limpia y saludable con nuestros servicios de peluquería y estética.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="productos" class="my-5">
+        <h2 class="text-center">Nuestros productos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="https://images.ecestaticos.com/XKJFrabFEJ1xTt_2Ox8dFkVyV0c=/0x0:2121x1414/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd67%2Fa8d%2F860%2Fd67a8d8604edeac49386e96e2890fe7a.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Alimentos para mascotas</h5>
+                        <p class="card-text">Contamos con una amplia variedad de alimentos para perros y gatos, para todas las necesidades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="https://www.semana.com/resizer/qJoNgTXEr299jJjqzK8XQMd-jnU=/1920x1080/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/4E5JCNVSW5BEDJN7VIHKJQ6SEA.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Accesorios</h5>
+                        <p class="card-text">Tenemos todo lo que necesitas para cuidar a tu mascota: correas, collares, juguetes, y mucho más.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <img class="card-img-top" src="https://www.tiendanimal.es/articulos/wp-content/uploads/2017/12/la-higiene-del-perro-1200x800.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Productos de higiene</h5>
+                        <p class="card-text">Mantén a tu mascota limpia y saludable con nuestra selección de productos de higiene.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="bg-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-muted mb-0">Veterinaria</p>
+                <p class="text-muted mb-0">Dirección: Calle 78 #8-42, Neiva</p>
+                <p class="text-muted mb-0">Teléfono: 3026040662</p>
+            </div>
+            <div class="col-md-6 text-right">
+                <p class="mb-0">Síguenos en:</p>
+                <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+

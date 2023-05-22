@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Veterinaria - Consultas</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+  <style>
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Veterinaria</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" th:href="@{/inicio}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/servicios">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/productos">Productos</a>
+            <span class="visually-hidden">(current)</span>
+          </li>
+          <li class="nav-item"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <form th:action="@{/saveC}" th:object="${compra}" method="POST">
+    <div class="card">
+      <div class="card-header">
+        <h3>COMPRA PRODUCTO</h3>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label>ID</label>
+          <input th:field="*{id}" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>NOMBRE COMPLETO</label>
+          <input th:field="*{name}" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>TELEFONO</label>
+          <input th:field="*{telefono}" type="text" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label>PRODUCTO:</label>
+          <select th:field="*{producto}" class="form-select" id="producto" required>
+            <option value="" disabled selected hidden>-- SELECCIONAR --</option>
+            <option value="Kit Maquina Peluquera Canina Profesional Perro Gato 14 Pieza">Kit Maquina Peluquera Canina Profesional Perro Gato 14 Pieza</option>
+            <option value="Tijeras Peluqueria Canina Kit X 3">Tijeras Peluqueria Canina Kit X 3</option>
+            <option value="Ringo Croquetas X30kg">Ringo Croquetas X30kg</option>
+            <option value="Bozal Tipo Canasta Para Perros Z4">Bozal Tipo Canasta Para Perros Z4</option>
+            <option value="Correa De Paseo Perro 10 Metros">Correa De Paseo Perro 10 Metros</option>
+            <option value="Alimento Pro Plan OptiDerma Sensitive para gato adulto sabor salmón y arroz en bolsa de 3kg">
+              Alimento Pro Plan OptiDerma Sensitive para gato adulto sabor salmón y arroz en bolsa de 3kg</option>
+            <option value="Cepillo Cerdas Suaves Para Gato">Cepillo Cerdas Suaves Para Gato</option>
+            <option value="Kit De Aseo De Animales Pequeños">Kit De Aseo De Animales Pequeños</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>METDO DE PAGO:</label>
+          <select th:field="*{metodo}" class="form-select" id="metodo" required>
+            <option value="" disabled selected hidden>METODO DE PAGO</option>
+            <option value="TARGETA CREDITO">TARGETA CREDITO</option>
+            <option value="TARGETA DEBITO">TARGETA DEBITO</option>
+            <option value="EFECTIVO">EFECTIVO</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>CANTIDAD DE PRODUCTO</label>
+          <input th:field="*{cantidad}" type="number" class="form-control" min="1" max="10" required>
+        </div>
+      </div>
+      <div class="card-footer">
+        <input type="submit" value="Guardar" class="btn btn-primary">
+        <a th:href="@{/inicio}" class="btn btn-dark">Atras</a>
+      </div>
+    </div>
+  </form>
+</main>
+
+<footer class="bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p>Veterinaria Neiva</p>
+        <i class="fab fa-facebook-f fa-lg mx-2"></i>
+        <i class="fab fa-twitter fa-lg mx-2"></i>
+        <i class="fab fa-instagram fa-lg mx-2"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
